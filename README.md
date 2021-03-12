@@ -1,14 +1,14 @@
-# Go Production ready REST API 
+# Production Ready Go REST API 
 
-Go REST API following Tutorial Edge course
+Created following Tutorial Edge course
 
-## Postgres DB
+## Docker Postgres DB
 
 docker run --name some-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
 ## Environment Variables
 
-create .env file 
+create .env file next to go.mod file
 
 DB_USERNAME=postgres
 DB_PASSWORD=postgres
