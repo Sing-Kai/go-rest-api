@@ -18,6 +18,7 @@ type App struct {
 func (app *App) Run() error {
 	fmt.Println("Setting up App")
 
+	fmt.Println("Creating new database")
 	var err error
 	db, err := database.NewDatabase()
 
@@ -25,13 +26,16 @@ func (app *App) Run() error {
 		return err
 	}
 
+	fmt.Println("Database migration")
 	err = database.MigrateDB(db)
 	if err != nil {
 		return err
 	}
 
+	fmt.Println("Initialising comment service")
 	commentService := comment.NewService(db)
 
+	fmt.Println("Setting up route handlers")
 	handler := transportHTTP.NewHandler(commentService)
 	handler.SetupRoutes()
 
