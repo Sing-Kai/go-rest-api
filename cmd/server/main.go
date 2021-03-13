@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/Sing-Kai/go-rest-api/internal/comment"
 	"github.com/Sing-Kai/go-rest-api/internal/database"
 	transportHTTP "github.com/Sing-Kai/go-rest-api/internal/transport/http"
-	"github.com/joho/godotenv"
 )
 
 // App - struct which contains things like pointers to database connections
@@ -56,9 +54,11 @@ func main() {
 	}
 }
 
+/*
 func init() {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
 }
+*/

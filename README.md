@@ -2,11 +2,17 @@
 
 Created following Tutorial Edge course
 
-## Docker Postgres DB
+## Running with Docker 
+
+docker-compose up --build
+
+## Running without Docker
+
+### Docker Postgres DB
 
 docker run --name some-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 
-## Environment Variables
+### Running with out Docker Environment Variables
 
 create .env file next to go.mod file
 
