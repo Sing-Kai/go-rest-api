@@ -6,6 +6,10 @@ Created following Tutorial Edge course
 
 docker-compose up --build
 
+## Testing 
+
+go test ./... -tags=e2e -v
+
 ## Running without Docker
 
 ### Docker Postgres DB
